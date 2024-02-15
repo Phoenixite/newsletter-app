@@ -1,0 +1,13 @@
+version: '3'
+services:
+  vue-app:
+    build: ./Front
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+
+  api:
+    build: ./API
+    ports:
+      - "3000:3000"
