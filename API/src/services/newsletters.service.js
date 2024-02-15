@@ -16,7 +16,7 @@ const { subscribers } = emailListModel;
 
 const transporter = nodemailer.createTransport(
     nodemailerSendgrid({
-        apiKey: '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'
+        apiKey: process.env.SENDGRID_API_KEY
     })
 );
 
